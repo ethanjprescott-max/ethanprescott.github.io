@@ -9,10 +9,10 @@ A static, responsive engineering portfolio with a fixed profile sidebar, project
 3. CTI Roller
 4. LimbLet — Ireland summer project
 5. Iris+ Drone — in progress
-6. Eagle Scout Project
+6. Eagle Scout Project — BioReserve conservation signs
 7. App made with AI — Quest, a private birthday game
 
-The CTI Roller, LimbLet, and Eagle Scout summaries now use information from Ethan's supplied résumé. The Quest page describes the private birthday game and Ethan’s independent creation and playtesting using Base44’s AI development tools. Details not supplied remain blank. All photos and the portrait remain placeholders. The original résumé PDF is available through the homepage download button and the navigation on every page. The drone page identifies the work as ongoing and does not claim a completed flight.
+The CTI Roller and LimbLet summaries use information from Ethan's supplied résumé. The Eagle Scout page describes the BioReserve sign project, including planning, approval, material selection, fabrication, welding instruction, and team coordination, based on Ethan's project notes. The Quest page describes the private birthday game and Ethan’s independent creation and playtesting using Base44’s AI development tools. Details not supplied remain blank. All photos and the portrait remain placeholders. The original résumé PDF is available through the homepage download button and the navigation on every page. The drone page identifies the work as ongoing and does not claim a completed flight.
 
 ## Make edits
 
