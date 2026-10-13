@@ -48,6 +48,8 @@ def sidebar(base='', project=False):
     avatar = (f'<img src="{e(asset_path(PROFILE["portrait"],base))}" alt="{e(PROFILE["name"])}">' if PROFILE['portrait'] else '<strong>EP</strong><span>Portrait</span>')
     home = base + 'index.html'
     nav = ''.join(f'<a href="{home if project else ""}#{key}"{ " aria-current=\"page\"" if project and key == "projects" else ""}>{label}</a>' for key,label in [('about','About'),('projects','Projects'),('experience','Experience'),('contact','Contact')])
+    if PROFILE['resume']:
+        nav += f'<a href="{e(asset_path(PROFILE["resume"],base))}" target="_blank" rel="noopener noreferrer">Résumé</a>'
     return f'''<aside class="sidebar" aria-label="Profile and navigation">
       <div class="identity"><a class="avatar" href="{e(home)}" aria-label="Ethan Prescott home">{avatar}</a><div><a class="sidebar-name" href="{e(home)}">{e(PROFILE['name'])}</a><p class="sidebar-degree">{e(PROFILE['degree'])}<br>{e(PROFILE['school'])}</p><p class="sidebar-school">{e(PROFILE['graduation'])}</p></div></div>
       <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="main-navigation" aria-expanded="false">{icon('menu')}</button>
@@ -96,16 +98,13 @@ def card(project, number):
 def build_home():
     cards = ''.join(card(project,i+1) for i,project in enumerate(PROJECTS))
     skills = ''.join(f'<div class="skill-group"><h3>{e(group["title"])}</h3><p>{" · ".join(e(item) for item in group["items"])}</p></div>' for group in PROFILE['skills'])
-    resume = (f'<a class="button" href="{e(asset_path(PROFILE["resume"],""))}" target="_blank" rel="noopener noreferrer">{icon("file",14)} View résumé</a>' if PROFILE['resume'] else f'<span class="button" aria-disabled="true">{icon("file",14)} Résumé · coming soon</span>')
+    experience = ''.join(f'<article class="experience-item"><p class="experience-label">{e(item["when"])}</p><div><h3>{e(item["title"])}</h3><p class="organization">{e(item["organization"])}</p><p>{e(item["description"])}</p></div></article>' for item in PROFILE['experience'])
+    resume = (f'<a class="button" href="{e(asset_path(PROFILE["resume"],""))}" download>{icon("file",14)} Download résumé</a>' if PROFILE['resume'] else f'<span class="button" aria-disabled="true">{icon("file",14)} Résumé · coming soon</span>')
     body = f'''
     <section id="about" aria-labelledby="intro-title"><p class="eyebrow">Engineering portfolio</p><h1 class="intro-title" id="intro-title">Design. Build.<br><em>Make it work.</em></h1><p class="intro-copy">{e(PROFILE['intro'])}</p><div class="intro-actions"><a class="button primary" href="#projects">Explore my projects {icon('arrow',14)}</a>{resume}</div></section>
     <section class="section" id="projects" aria-labelledby="projects-title"><div class="section-head"><h2 id="projects-title">Selected projects</h2><p>01 — 07</p></div><div class="project-grid">{cards}</div></section>
     <section class="section" id="skills" aria-labelledby="skills-title"><div class="section-head"><h2 id="skills-title">Tools & skills</h2></div><div class="skills-grid">{skills}</div></section>
-    <section class="section" id="experience" aria-labelledby="experience-title"><div class="section-head"><h2 id="experience-title">Experience & education</h2></div><div class="experience-list">
-      <article class="experience-item"><p class="experience-label">Present</p><div><h3>Co-President</h3><p class="organization">Villanova Club Robotics</p><p>Club leadership, robotics events, and competition preparation.</p></div></article>
-      <article class="experience-item"><p class="experience-label">Internship</p><div><h3>Engineering Intern</h3><p class="organization">CTI</p><p>Hands-on engineering experience, including the roller project featured above.</p></div></article>
-      <article class="experience-item"><p class="experience-label">Class of 2028</p><div><h3>Mechanical Engineering</h3><p class="organization">Villanova University</p><p>Entrepreneurship minor completed through the Engineering Entrepreneurship Summer Institute in Ireland.</p></div></article>
-    </div></section>
+    <section class="section" id="experience" aria-labelledby="experience-title"><div class="section-head"><h2 id="experience-title">Experience & education</h2></div><div class="experience-list">{experience}</div></section>
     <section class="section" id="contact" aria-labelledby="contact-title"><div class="section-head"><h2 id="contact-title">Let’s connect</h2></div><p class="contact-copy">{e(PROFILE['interests'])}</p><div class="contact-links"><a href="mailto:{e(PROFILE['email'])}">{icon('mail',16)} Email</a><a href="{e(PROFILE['linkedin'])}" target="_blank" rel="noopener noreferrer">{icon('external',14)} LinkedIn</a><a href="{e(PROFILE['github'])}" target="_blank" rel="noopener noreferrer">{icon('external',14)} GitHub</a></div></section>
     '''
     (ROOT / 'index.html').write_text(page('Engineering Portfolio','Ethan Prescott — Villanova mechanical engineering student. Projects in combat robotics, mechanical design, drone systems, entrepreneurship, and community service.',body))

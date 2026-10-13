@@ -5,17 +5,87 @@
     "school": "Villanova University",
     "graduation": "Class of 2028",
     "portrait": "",
-    "email": "epresc01@villanova.edu",
-    "linkedin": "https://www.linkedin.com/in/ethan-prescott-6a3679280/",
+    "email": "ethan.j.prescott@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/ethan-prescott22",
     "github": "https://github.com/ethanjprescott-max",
-    "resume": "",
+    "resume": "assets/ethan-prescott-resume.pdf",
     "intro": "I’m a mechanical engineering student at Villanova University and co-president of Villanova Club Robotics. I enjoy taking a project from a CAD model to a working build, solving the problems along the way, and working with a team to make it happen.",
     "interests": "I’m interested in internship opportunities in robotics, mechanical design, and automation.",
     "skills": [
-      {"title": "Mechanical design", "items": ["SolidWorks", "Component selection", "Assembly"]},
-      {"title": "Robotics & integration", "items": ["Motor & ESC research", "Control-system wiring", "RC systems"]},
-      {"title": "Drone systems", "items": ["Pixhawk", "Mission Planner", "Telemetry troubleshooting"]},
-      {"title": "Project leadership", "items": ["Team coordination", "Competition preparation", "Club leadership"]}
+      {
+        "title": "Mechanical design",
+        "items": [
+          "SolidWorks",
+          "Autodesk Inventor",
+          "Component selection"
+        ]
+      },
+      {
+        "title": "Programming & analysis",
+        "items": [
+          "MATLAB",
+          "Maple",
+          "Microsoft Excel"
+        ]
+      },
+      {
+        "title": "Fabrication",
+        "items": [
+          "3D printing",
+          "Soldering",
+          "Manual milling"
+        ]
+      },
+      {
+        "title": "Robotics & integration",
+        "items": [
+          "Weight-budget management",
+          "Control-system wiring",
+          "System integration"
+        ]
+      },
+      {
+        "title": "Drone systems",
+        "items": [
+          "Pixhawk",
+          "Mission Planner",
+          "Telemetry troubleshooting"
+        ]
+      },
+      {
+        "title": "Project leadership",
+        "items": [
+          "Team coordination",
+          "Club operations",
+          "Sponsorship outreach"
+        ]
+      }
+    ],
+    "experience": [
+      {
+        "when": "Aug 2026 – Present",
+        "title": "Co-President",
+        "organization": "Villanova University Club Robotics",
+        "description": "Co-manage a club of 100+ students, organize a ten-person executive board, and lead competition preparation and robotics events. Secured $30,000 in university and sponsorship funding."
+      },
+      {
+        "when": "Summers 2024 & 2025",
+        "title": "Engineering Intern",
+        "organization": "Composite Technology and Infrastructure · Coeymans, NY",
+        "description": "Designed and fabricated a fiberglass-cutting roller that doubled efficiency. Supported ten technical submittals through valve and grouting research, and assisted with equipment repairs and project logistics."
+      },
+      {
+        "when": "Summer 2026",
+        "title": "Engineering Entrepreneurship Summer Institute",
+        "organization": "Villanova University · Ireland",
+        "description": "Developed LimbLet with an interdisciplinary team of three, progressing a wearable sensor concept from initial ideation to a venture pitch."
+      },
+      {
+        "when": "May 2028",
+        "title": "B.S. Mechanical Engineering",
+        "organization": "Villanova University · College of Engineering",
+        "description": "Minors in Mechatronics and Entrepreneurship · GPA: 3.74. Coursework includes Solid Mechanics and Design, Dynamics II, Circuits, Heat Transfer, and Fluid Mechanics."
+      }
     ]
   },
   "projects": [
@@ -27,15 +97,37 @@
       "status": "Competition project",
       "date": "January 2025 – Present",
       "role": "Team lead & driver",
-      "tags": ["SolidWorks", "Fabrication", "Team leadership"],
-      "summary": "Led a nine-person team in the design, fabrication, assembly, and testing of a 3 lb vertical spinner for Villanova’s first NHRL competition.",
+      "tags": [
+        "SolidWorks",
+        "Fabrication",
+        "Team leadership"
+      ],
+      "summary": "Led a nine-member team building one of Villanova’s first 3 lb combat robots to compete at NHRL.",
       "overview": "FREEDOM is a 3 lb vertical-spinner combat robot built by Villanova Combat Robotics for competition at the National Havoc Robot League (NHRL). The project brought together mechanical design, component research, fabrication, electrical integration, and competition preparation.",
-      "contribution": "As team lead and driver, I coordinated a team of nine, helped keep the build on schedule, and drove the robot at competition. My work included motor, ESC, and material research; SolidWorks design; fabrication; assembly; and testing.",
-      "design": "The build involved choosing components, designing parts in SolidWorks, fabricating and assembling the robot, and testing the integrated system before competition.",
-      "results": "Brought FREEDOM to Villanova’s first NHRL competition and served as its driver. More detailed competition notes and design iterations will be added here.",
+      "contribution": "As team lead and driver, I coordinated mechanical and electrical subsystem development, delegated responsibilities, and managed project deadlines. My work included SolidWorks design iterations, component selection, weight-budget management, fabrication, and system integration.",
+      "design": "Collaborated across drivetrain, chassis, electronics, and rotating-system teams to resolve tradeoffs involving weight, packaging, reliability, and manufacturability within the 3 lb competition constraint.",
+      "results": "FREEDOM became one of Villanova’s first 3 lb combat robots to compete at NHRL. I served as its team lead and driver. More detailed competition notes and design iterations will be added here.",
       "cover": "",
-      "images": [{"src": "", "caption": "Robot & assembly"}, {"src": "", "caption": "CAD & design details"}, {"src": "", "caption": "Competition & testing"}],
-      "links": [{"label": "Project repository", "url": "https://github.com/ethanjprescott-max/FREEDOM"}]
+      "images": [
+        {
+          "src": "",
+          "caption": "Robot & assembly"
+        },
+        {
+          "src": "",
+          "caption": "CAD & design details"
+        },
+        {
+          "src": "",
+          "caption": "Competition & testing"
+        }
+      ],
+      "links": [
+        {
+          "label": "Project repository",
+          "url": "https://github.com/ethanjprescott-max/FREEDOM"
+        }
+      ]
     },
     {
       "id": "beetlebot",
@@ -45,14 +137,31 @@
       "status": "Completed",
       "date": "August – December 2025",
       "role": "Lead project designer & driver",
-      "tags": ["Control wiring", "Integration", "Competition"],
+      "tags": [
+        "Control wiring",
+        "Integration",
+        "Competition"
+      ],
       "summary": "Designed and wired the control system for a semester-long combat robot, then drove it in a classroom competition with a three-person team.",
       "overview": "A semester-long combat robot project for Mechanical Engineering Analysis and Design. Our three-person team built a robot and competed against other class teams.",
       "contribution": "I served as lead project designer and driver, designed and wired the control system, and operated the robot during competition.",
       "design": "My documented work focused on control-system design, wiring, and integration. Further mechanical details, drawings, and build photos will be added here.",
       "results": "Drove the robot in the class competition, where our team defeated two competing robots.",
       "cover": "",
-      "images": [{"src": "", "caption": "Finished robot"}, {"src": "", "caption": "Control system & wiring"}, {"src": "", "caption": "Build & competition"}],
+      "images": [
+        {
+          "src": "",
+          "caption": "Finished robot"
+        },
+        {
+          "src": "",
+          "caption": "Control system & wiring"
+        },
+        {
+          "src": "",
+          "caption": "Build & competition"
+        }
+      ],
       "links": []
     },
     {
@@ -60,35 +169,68 @@
       "title": "CTI Roller",
       "subtitle": "Engineering internship project",
       "category": "Industry project",
-      "status": "",
-      "date": "",
-      "role": "",
-      "tags": [],
-      "summary": "",
-      "overview": "",
-      "contribution": "",
+      "status": "Completed",
+      "date": "Summers 2024 & 2025",
+      "role": "Engineering intern",
+      "tags": [
+        "Fabrication",
+        "Process improvement"
+      ],
+      "summary": "Designed and fabricated a custom roller that doubled fiberglass-cutting efficiency during my engineering internship at CTI.",
+      "overview": "A custom roller built to improve the fiberglass-cutting workflow at Composite Technology and Infrastructure in Coeymans, New York.",
+      "contribution": "Designed and fabricated the custom roller during my engineering internship.",
       "design": "",
-      "results": "",
+      "results": "The roller doubled fiberglass-cutting efficiency and continued to be used by the company after the project.",
       "cover": "",
-      "images": [{"src": "", "caption": "Finished roller"}, {"src": "", "caption": "Design & drawings"}, {"src": "", "caption": "Fabrication"}],
+      "images": [
+        {
+          "src": "",
+          "caption": "Finished roller"
+        },
+        {
+          "src": "",
+          "caption": "Design & drawings"
+        },
+        {
+          "src": "",
+          "caption": "Fabrication"
+        }
+      ],
       "links": []
     },
     {
       "id": "limblet",
-      "title": "Limblet",
-      "subtitle": "Ireland summer project",
+      "title": "LimbLet",
+      "subtitle": "Wearable sensor venture concept",
       "category": "Entrepreneurship",
-      "status": "",
-      "date": "",
-      "role": "",
-      "tags": [],
-      "summary": "",
-      "overview": "",
-      "contribution": "",
-      "design": "",
-      "results": "",
+      "status": "Concept project",
+      "date": "Summer 2026",
+      "role": "Interdisciplinary team of three",
+      "tags": [
+        "Entrepreneurship",
+        "Product concept",
+        "Sustainability"
+      ],
+      "summary": "Developed a wearable sensor concept supporting preventive care for aging populations, from initial ideation to a venture pitch.",
+      "overview": "LimbLet is a wearable sensor concept developed through Villanova’s Engineering Entrepreneurship Summer Institute (E2SI) in Ireland. The concept aimed to support preventive care for aging populations.",
+      "contribution": "Collaborated with an interdisciplinary team of three to develop the concept and progress it from initial ideation to a venture pitch.",
+      "design": "Evaluated global innovation and sustainable business practices while in Ireland, incorporating recyclable materials and circular-economy principles into the product concept.",
+      "results": "Progressed the product concept into a venture pitch. This was a concept-stage project; a validated device or clinical result is not documented here.",
       "cover": "",
-      "images": [{"src": "", "caption": "Project visual"}, {"src": "", "caption": "Development process"}, {"src": "", "caption": "Final presentation"}],
+      "images": [
+        {
+          "src": "",
+          "caption": "Project visual"
+        },
+        {
+          "src": "",
+          "caption": "Development process"
+        },
+        {
+          "src": "",
+          "caption": "Final presentation"
+        }
+      ],
       "links": []
     },
     {
@@ -99,32 +241,65 @@
       "status": "In progress",
       "date": "2026 – Present",
       "role": "Setup & systems troubleshooting",
-      "tags": ["Pixhawk", "Mission Planner", "RC systems"],
+      "tags": [
+        "Pixhawk",
+        "Mission Planner",
+        "RC systems"
+      ],
       "summary": "Working on a 3DR Iris+ quadcopter: connecting the radio and flight controller, configuring telemetry, and troubleshooting motor and calibration issues.",
       "overview": "An ongoing hands-on project working through the systems on a 3DR Iris+ quadcopter with a Pixhawk flight controller. The work covers the transmitter, receiver, telemetry radios, flight controller, and motors.",
       "contribution": "Worked on receiver binding, radio calibration, neutral channel values, direct USB connection to Pixhawk, SiK telemetry setup, battery settings, and motor testing in Mission Planner.",
       "design": "Investigated compass and pre-arm errors, radio connection issues, and differences in motor startup behavior. Used Mission Planner to inspect RC channel responses and test the system.",
       "results": "RC input responses have been observed in Mission Planner. Motor startup and telemetry troubleshooting are ongoing; a successful flight has not yet been documented here.",
       "cover": "",
-      "images": [{"src": "", "caption": "Drone & hardware"}, {"src": "", "caption": "Pixhawk & telemetry"}, {"src": "", "caption": "Setup & testing"}],
+      "images": [
+        {
+          "src": "",
+          "caption": "Drone & hardware"
+        },
+        {
+          "src": "",
+          "caption": "Pixhawk & telemetry"
+        },
+        {
+          "src": "",
+          "caption": "Setup & testing"
+        }
+      ],
       "links": []
     },
     {
       "id": "eagle-scout",
       "title": "Eagle Scout Project",
-      "subtitle": "Community service project",
+      "subtitle": "Community sign-building project",
       "category": "Leadership & service",
-      "status": "",
+      "status": "Completed",
       "date": "",
-      "role": "",
-      "tags": [],
-      "summary": "",
-      "overview": "",
-      "contribution": "",
+      "role": "Project leader",
+      "tags": [
+        "Leadership",
+        "Community service"
+      ],
+      "summary": "Led a sign-building community project as part of earning the rank of Eagle Scout.",
+      "overview": "A community sign-building project completed as part of my Eagle Scout journey.",
+      "contribution": "Led the community sign-building project.",
       "design": "",
-      "results": "",
+      "results": "Achieved the rank of Eagle Scout. More details about the project’s scope and community impact will be added here.",
       "cover": "",
-      "images": [{"src": "", "caption": "Completed project"}, {"src": "", "caption": "Planning & preparation"}, {"src": "", "caption": "Project day"}],
+      "images": [
+        {
+          "src": "",
+          "caption": "Completed project"
+        },
+        {
+          "src": "",
+          "caption": "Planning & preparation"
+        },
+        {
+          "src": "",
+          "caption": "Project day"
+        }
+      ],
       "links": []
     },
     {
@@ -142,7 +317,20 @@
       "design": "",
       "results": "",
       "cover": "",
-      "images": [{"src": "", "caption": "App screens"}, {"src": "", "caption": "Design & development"}, {"src": "", "caption": "Features"}],
+      "images": [
+        {
+          "src": "",
+          "caption": "App screens"
+        },
+        {
+          "src": "",
+          "caption": "Design & development"
+        },
+        {
+          "src": "",
+          "caption": "Features"
+        }
+      ],
       "links": []
     }
   ]
