@@ -1,0 +1,63 @@
+# Ethan Prescott — Engineering Portfolio
+
+A static, responsive engineering portfolio with a fixed profile sidebar, project cards, and seven individual project pages. The layout is inspired by the supplied portfolio reference; its HTML, CSS, icons, and scripts are independently implemented.
+
+## Included projects
+
+1. FREEDOM — 3 lb NHRL combat robot
+2. Class Beetlebot — Mechanical Engineering Analysis & Design
+3. CTI Roller
+4. Limblet — Ireland summer project
+5. Iris+ Drone — in progress
+6. Eagle Scout Project
+7. An App for My Girlfriend
+
+The CTI Roller, Limblet, Eagle Scout, and personal app pages intentionally have blank content sections. All photos and the portrait are placeholders. The résumé link remains inactive until a résumé is added. The drone page identifies the work as ongoing and does not claim a completed flight.
+
+## Make edits
+
+The editable source for all text, project details, image paths, and profile links is **`content/portfolio.json`**. Empty strings remain blank on the generated website.
+
+After an edit, run:
+
+```bash
+python3 scripts/build.py
+```
+
+This regenerates `index.html` and `projects/*.html`. Commit the JSON changes and the generated pages together. CSS is in `assets/css/style.css`; browser interactions are in `assets/js/site.js`. No Node installation, framework, or package manager is required.
+
+You can also edit the generated HTML directly for a quick change, but a later build will replace those edits. Keep lasting content changes in the JSON file.
+
+## Add images and a résumé
+
+See `assets/images/README.md` for image instructions. Add a PDF such as `assets/ethan-prescott-resume.pdf` and set `profile.resume` to the file's path. The builder checks that nonempty asset paths point to real files.
+
+## Preview locally
+
+Open `index.html` in a browser, or use a simple local server:
+
+```bash
+python3 -m http.server 8000
+```
+
+Visit `http://localhost:8000`. Check the mobile navigation, all project links, and any newly added images.
+
+## GitHub Pages publishing
+
+This version is ready for branch-based GitHub Pages hosting. Public publication should be enabled only when Ethan chooses to make the website public.
+
+When ready, open the repository's **Settings → Pages**, select **Deploy from a branch**, then **main** and **/(root)**, and save. No automated deployment workflow is installed in this draft.
+
+The connected account is `ethanjprescott-max`, and this repository is named `ethanprescott.github.io`. Because the repository name differs from the account's `ethanjprescott-max.github.io` user-site name, its GitHub Pages address will normally be a project URL:
+
+`https://ethanjprescott-max.github.io/ethanprescott.github.io/`
+
+The exact live address should be taken from GitHub's Pages settings after publication. All internal links use relative paths so project-URL hosting works.
+
+## Updating together
+
+Future edits can be requested in the same conversation by naming the project and the change, or sharing new text and images. The repository keeps version history so changes can be reviewed and revised.
+
+## Dependencies
+
+The site uses standard HTML, CSS, and JavaScript. Optional Google Fonts load DM Sans and Manrope; Arial provides a fallback if they are unavailable. The build script uses only Python's standard library.
