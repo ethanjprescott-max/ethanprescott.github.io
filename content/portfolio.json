@@ -304,31 +304,35 @@
     },
     {
       "id": "personal-app",
-      "title": "An App for My Girlfriend",
-      "subtitle": "Personal app project",
+      "title": "App made with AI",
+      "subtitle": "Quest · A private birthday game",
       "category": "Software project",
-      "status": "",
+      "status": "Completed",
       "date": "",
-      "role": "",
-      "tags": [],
-      "summary": "",
-      "overview": "",
-      "contribution": "",
-      "design": "",
-      "results": "",
+      "role": "Sole creator & playtester",
+      "tags": [
+        "Base44",
+        "AI-assisted development",
+        "Playtesting"
+      ],
+      "summary": "Created Quest, a private birthday game with about a month of daily minigames, new games introduced over time, and personalized messages and rewards.",
+      "overview": "Quest is a private app I made for my girlfriend’s birthday. The experience spanned about a month, with minigames to play each day and additional minigames introduced as the days progressed. It included music, personal messages, rewards, Easter eggs, and difficulty features.",
+      "contribution": "I created the app myself using Base44’s AI development tools and independently playtested it. My work covered the game concept, daily experience, minigames, and personalized features.",
+      "design": "Built the experience through Base44, using its AI development tools to develop the minigames and supporting features. I organized the game around daily play, introduced new minigames over time, and playtested the app myself.",
+      "results": "Quest received positive feedback from my girlfriend, its intended user. The app remains private.",
       "cover": "",
       "images": [
         {
           "src": "",
-          "caption": "App screens"
+          "caption": "Quest app screens"
         },
         {
           "src": "",
-          "caption": "Design & development"
+          "caption": "Daily minigames"
         },
         {
           "src": "",
-          "caption": "Features"
+          "caption": "Rewards & Easter eggs"
         }
       ],
       "links": []

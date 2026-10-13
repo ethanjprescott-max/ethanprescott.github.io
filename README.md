@@ -10,9 +10,9 @@ A static, responsive engineering portfolio with a fixed profile sidebar, project
 4. LimbLet — Ireland summer project
 5. Iris+ Drone — in progress
 6. Eagle Scout Project
-7. An App for My Girlfriend
+7. App made with AI — Quest, a private birthday game
 
-The CTI Roller, LimbLet, and Eagle Scout summaries now use information from Ethan's supplied résumé. Details not supplied remain blank, and the personal app page still has blank content sections. All photos and the portrait remain placeholders. The original résumé PDF is available through the homepage download button and the navigation on every page. The drone page identifies the work as ongoing and does not claim a completed flight.
+The CTI Roller, LimbLet, and Eagle Scout summaries now use information from Ethan's supplied résumé. The Quest page describes the private birthday game and Ethan’s independent creation and playtesting using Base44’s AI development tools. Details not supplied remain blank. All photos and the portrait remain placeholders. The original résumé PDF is available through the homepage download button and the navigation on every page. The drone page identifies the work as ongoing and does not claim a completed flight.
 
 ## Make edits
 
