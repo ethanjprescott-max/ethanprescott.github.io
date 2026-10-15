@@ -12,7 +12,7 @@ A static, responsive engineering portfolio with a fixed profile sidebar, project
 6. Eagle Scout Project — BioReserve conservation signs
 7. App made with AI — Quest, a private birthday game
 
-The CTI Roller and LimbLet summaries use information from Ethan's supplied résumé. The Eagle Scout page describes the BioReserve sign project, including planning, approval, material selection, fabrication, welding instruction, and team coordination, based on Ethan's project notes. The Quest page describes the private birthday game and Ethan’s independent creation and playtesting using Base44’s AI development tools. Details not supplied remain blank. All photos and the portrait remain placeholders. The original résumé PDF is available through the homepage download button and the navigation on every page. The drone page identifies the work as ongoing and does not claim a completed flight.
+The CTI Roller and LimbLet summaries use information from Ethan's supplied résumé. The Eagle Scout page describes the BioReserve sign project, including planning, approval, material selection, fabrication, welding instruction, and team coordination, based on Ethan's project notes. The Quest page describes the private birthday game and Ethan’s independent creation and playtesting using Base44’s AI development tools. Details not supplied remain blank. The Iris+ project includes two supplied setup photos. Quest includes two app screenshots and a screen recording. FREEDOM includes six supplied photos/screenshots and an arena recording, and the Eagle Scout project includes three supplied photos. Both videos use native playback controls. Other missing photos and the portrait remain placeholders. The original résumé PDF is available through the homepage download button and the navigation on every page. The drone page identifies the work as ongoing and does not claim a completed flight.
 
 ## Make edits
 
@@ -31,6 +31,10 @@ You can also edit the generated HTML directly for a quick change, but a later bu
 ## Add images and a résumé
 
 See `assets/images/README.md` for image instructions. Add a PDF such as `assets/ethan-prescott-resume.pdf` and set `profile.resume` to the file's path. The builder checks that nonempty asset paths point to real files.
+
+## Video media
+
+The Quest video is a web-optimized MP4 at `assets/videos/quest-walkthrough.mp4`. The NHRL recording is at `assets/videos/nhrl-arena.mp4`. Each has a poster image and a download link. Video sources, posters, titles, and captions are configured through the project’s optional `video` object in `content/portfolio.json`. The original uploaded MOV files are not included in the website repository. Videos appear at the top of a project by default; set `video.placement` to `gallery` to put a recording after the photo gallery, and use `video.width` / `video.height` to preserve its orientation.
 
 ## Preview locally
 

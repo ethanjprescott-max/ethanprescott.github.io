@@ -107,19 +107,31 @@
       "contribution": "As team lead and driver, I coordinated mechanical and electrical subsystem development, delegated responsibilities, and managed project deadlines. My work included SolidWorks design iterations, component selection, weight-budget management, fabrication, and system integration.",
       "design": "Collaborated across drivetrain, chassis, electronics, and rotating-system teams to resolve tradeoffs involving weight, packaging, reliability, and manufacturability within the 3 lb competition constraint.",
       "results": "FREEDOM became one of Villanova’s first 3 lb combat robots to compete at NHRL. I served as its team lead and driver. More detailed competition notes and design iterations will be added here.",
-      "cover": "",
+      "cover": "assets/images/projects/freedom/robot-check-in.png",
       "images": [
         {
-          "src": "",
-          "caption": "Robot & assembly"
+          "src": "assets/images/projects/freedom/robot-check-in.png",
+          "caption": "Robot preparation at NHRL"
         },
         {
-          "src": "",
-          "caption": "CAD & design details"
+          "src": "assets/images/projects/freedom/arena-overview.png",
+          "caption": "NHRL arena view"
         },
         {
-          "src": "",
-          "caption": "Competition & testing"
+          "src": "assets/images/projects/freedom/arena-robot.png",
+          "caption": "Combat robot in the NHRL arena"
+        },
+        {
+          "src": "assets/images/projects/freedom/team-with-robots.jpeg",
+          "caption": "Team members with completed combat robots"
+        },
+        {
+          "src": "assets/images/projects/freedom/bench-assembly.jpeg",
+          "caption": "Robot assembly and bench work"
+        },
+        {
+          "src": "assets/images/projects/freedom/nhrl-team.jpeg",
+          "caption": "NHRL team photo"
         }
       ],
       "links": [
@@ -127,7 +139,17 @@
           "label": "Project repository",
           "url": "https://github.com/ethanjprescott-max/FREEDOM"
         }
-      ]
+      ],
+      "video": {
+        "src": "assets/videos/nhrl-arena.mp4",
+        "poster": "assets/images/projects/freedom/nhrl-arena-poster.jpg",
+        "title": "NHRL arena recording",
+        "caption": "NHRL arena screen recording · 18 sec",
+        "placement": "gallery",
+        "heading": "At NHRL",
+        "width": 960,
+        "height": 444
+      }
     },
     {
       "id": "beetlebot",
@@ -252,19 +274,15 @@
       "contribution": "Worked on receiver binding, radio calibration, neutral channel values, direct USB connection to Pixhawk, SiK telemetry setup, battery settings, and motor testing in Mission Planner.",
       "design": "Investigated compass and pre-arm errors, radio connection issues, and differences in motor startup behavior. Used Mission Planner to inspect RC channel responses and test the system.",
       "results": "RC input responses have been observed in Mission Planner. Motor startup and telemetry troubleshooting are ongoing; a successful flight has not yet been documented here.",
-      "cover": "",
+      "cover": "assets/images/projects/iris-drone/bench-setup.jpg",
       "images": [
         {
-          "src": "",
-          "caption": "Drone & hardware"
+          "src": "assets/images/projects/iris-drone/bench-setup.jpg",
+          "caption": "Iris+ drone setup connected to a laptop on the lab bench"
         },
         {
-          "src": "",
-          "caption": "Pixhawk & telemetry"
-        },
-        {
-          "src": "",
-          "caption": "Setup & testing"
+          "src": "assets/images/projects/iris-drone/receiver-wiring.jpg",
+          "caption": "Receiver and flight-controller wiring close-up"
         }
       ],
       "links": []
@@ -288,19 +306,19 @@
       "contribution": "Led project planning and communication, obtained approval from the Boy Scouts organization, and coordinated with the BioReserve to schedule installation. Worked alongside my dad and five friends and fellow Scouts. My dad helped source materials and arranged welding instruction from a friend; the team helped dig holes and install the signs.",
       "design": "Selected affordable materials with long-term use at the preserve in mind. The signs used wooden panels with a protective coating, plus welded metal joints that positioned the panels at a comfortable reading angle. The project combined material sourcing, fabrication, welding instruction, and site installation.",
       "results": "Installed signs that gave the BioReserve a lasting way to share information about its plant life without relying solely on verbal guided tours. Completing the project required balancing cost and durability, securing organizational approval, and coordinating volunteers and the preserve’s availability. The project formed part of earning my Eagle Scout rank.",
-      "cover": "",
+      "cover": "assets/images/projects/eagle-scout/sign-installation.jpg",
       "images": [
         {
-          "src": "",
-          "caption": "Installed BioReserve signs"
+          "src": "assets/images/projects/eagle-scout/sign-installation.jpg",
+          "caption": "Positioning a sign at the BioReserve"
         },
         {
-          "src": "",
-          "caption": "Wood panels & welded joints"
+          "src": "assets/images/projects/eagle-scout/bioreserve-meeting.jpg",
+          "caption": "Meeting at the BioReserve"
         },
         {
-          "src": "",
-          "caption": "Team & installation"
+          "src": "assets/images/projects/eagle-scout/welding.jpg",
+          "caption": "Welding the metal sign joints"
         }
       ],
       "links": [
@@ -328,22 +346,26 @@
       "contribution": "I created the app myself using Base44’s AI development tools and independently playtested it. My work covered the game concept, daily experience, minigames, and personalized features.",
       "design": "Built the experience through Base44, using its AI development tools to develop the minigames and supporting features. I organized the game around daily play, introduced new minigames over time, and playtested the app myself.",
       "results": "Quest received positive feedback from my girlfriend, its intended user. The app remains private.",
-      "cover": "",
+      "cover": "assets/images/projects/personal-app/dinosaur-minigame.png",
       "images": [
         {
-          "src": "",
-          "caption": "Quest app screens"
+          "src": "assets/images/projects/personal-app/dinosaur-minigame.png",
+          "caption": "Quest dinosaur minigame"
         },
         {
-          "src": "",
-          "caption": "Daily minigames"
-        },
-        {
-          "src": "",
-          "caption": "Rewards & Easter eggs"
+          "src": "assets/images/projects/personal-app/daily-rewards.png",
+          "caption": "Quest reward and daily-game screen"
         }
       ],
-      "links": []
+      "links": [],
+      "video": {
+        "src": "assets/videos/quest-walkthrough.mp4",
+        "poster": "assets/images/projects/personal-app/quest-poster.jpg",
+        "title": "Quest app screen recording",
+        "caption": "Quest minigames and reward screens · 1 min 17 sec",
+        "width": 540,
+        "height": 1174
+      }
     }
   ]
 }

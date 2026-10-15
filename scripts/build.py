@@ -113,6 +113,19 @@ def detail_content(title, key, project, number):
     copy = f'<p class="detail-copy">{e(project[key])}</p>' if project[key] else '<div class="empty-content" aria-label="Content to be added"></div>'
     return f'<section class="detail-section" aria-labelledby="{key}-title"><div class="detail-heading"><span>{number:02d}</span><h2 id="{key}-title">{title}</h2></div>{copy}</section>'
 
+def video_player(video, base):
+    src = e(asset_path(video['src'],base))
+    poster = e(asset_path(video['poster'],base)) if video.get('poster') else ''
+    width = int(video.get('width',540))
+    height = int(video.get('height',1174))
+    return f'''<figure class="project-video"><div class="video-shell"><video controls playsinline preload="metadata" width="{width}" height="{height}" poster="{poster}" aria-label="{e(video['title'])}" aria-describedby="video-caption"><source src="{src}" type="video/mp4">Your browser does not support embedded video. <a href="{src}">Download the recording</a>.</video></div><figcaption id="video-caption"><span>{e(video['caption'])}</span><a href="{src}" download>Download video</a></figcaption></figure>'''
+
+def hero_media(project, index, base):
+    video = project.get('video')
+    if video and video.get('placement','hero') == 'hero':
+        return video_player(video,base)
+    return f'<div class="hero-photo">{photo(project["cover"],project["title"],f"{index+1:02d}",base)}</div>'
+
 def build_project(project, index):
     base = '../'
     tags = ' · '.join(e(tag) for tag in project['tags'])
@@ -120,15 +133,20 @@ def build_project(project, index):
     metadata = ''.join(f'<div><dt>{label}</dt><dd>{value or blank}</dd></div>' for label,value in [('When',e(project['date'])),('My role',e(project['role'])),('Tools & skills',tags)])
     detail = ''.join(detail_content(title,key,project,i+1) for i,(title,key) in enumerate([('Overview','overview'),('My contribution','contribution'),('Design & build','design'),('Results & lessons','results')]))
     gallery = ''.join(f'<figure>{photo(image["src"],image["caption"],f"{i+1:02d}",base,True)}<figcaption>{e(image["caption"])}</figcaption></figure>' for i,image in enumerate(project['images']))
+    gallery_class = 'gallery-grid gallery-pair' if len(project['images']) == 2 else 'gallery-grid'
+    extra_video = ''
+    if project.get('video',{}).get('placement') == 'gallery':
+        extra_video = f'<section class="video-section" aria-labelledby="event-video-title"><h2 id="event-video-title">{e(project["video"].get("heading","Project video"))}</h2>{video_player(project["video"],base)}</section>'
     resources = ''.join(f'<a class="button" href="{e(link["url"])}" target="_blank" rel="noopener noreferrer">{e(link["label"])} {icon("external",13)}</a>' for link in project['links'])
     previous = PROJECTS[(index-1) % len(PROJECTS)]
     following = PROJECTS[(index+1) % len(PROJECTS)]
     body = f'''
     <a class="breadcrumb" href="../index.html#projects">{icon('back',14)} All projects</a>
     <header class="project-header"><div class="project-header-top"><p class="eyebrow">{e(project['category'])}</p>{status(project)}</div><h1>{e(project['title'])}</h1><p class="subtitle">{e(project['subtitle'])}</p><dl class="project-meta">{metadata}</dl></header>
-    <div class="hero-photo">{photo(project['cover'],project['title'],f'{index+1:02d}',base)}</div>
+    {hero_media(project,index,base)}
     {detail}
-    <section class="gallery-section" aria-labelledby="gallery-title"><h2 id="gallery-title">Project gallery</h2><div class="gallery-grid">{gallery}</div></section>
+    <section class="gallery-section" aria-labelledby="gallery-title"><h2 id="gallery-title">Project gallery</h2><div class="{gallery_class}">{gallery}</div></section>
+    {extra_video}
     {f'<div class="project-resources">{resources}</div>' if resources else ''}
     <nav class="project-navigation" aria-label="More projects"><a href="{previous['id']}.html"><span>← Previous project</span><strong>{e(previous['title'])}</strong></a><a href="{following['id']}.html"><span>Next project →</span><strong>{e(following['title'])}</strong></a></nav>
     '''
