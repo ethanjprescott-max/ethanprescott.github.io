@@ -204,22 +204,29 @@
       "contribution": "Designed and fabricated the custom roller during my engineering internship.",
       "design": "",
       "results": "The roller doubled fiberglass-cutting efficiency and continued to be used by the company after the project.",
-      "cover": "",
+      "cover": "assets/images/projects/cti-roller/fiberglass-cutting.jpg",
       "images": [
         {
-          "src": "",
-          "caption": "Finished roller"
+          "src": "assets/images/projects/cti-roller/fiberglass-cutting.jpg",
+          "caption": "Cutting fiberglass using the custom CTI roller"
         },
         {
-          "src": "",
-          "caption": "Design & drawings"
-        },
-        {
-          "src": "",
-          "caption": "Fabrication"
+          "src": "assets/images/projects/cti-roller/roller-in-use.jpg",
+          "caption": "Operating the roller in the fiberglass-cutting workspace"
         }
       ],
-      "links": []
+      "links": [],
+      "cover_layout": "portrait",
+      "video": {
+        "src": "assets/videos/cti-roller.mp4",
+        "poster": "assets/images/projects/cti-roller/fiberglass-cutting.jpg",
+        "title": "CTI roller in use",
+        "caption": "CTI fiberglass roller in use · 2 sec",
+        "placement": "gallery",
+        "heading": "Roller in action",
+        "width": 720,
+        "height": 1280
+      }
     },
     {
       "id": "limblet",
