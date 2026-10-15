@@ -239,23 +239,30 @@
       "contribution": "Collaborated with an interdisciplinary team of three to develop the concept and progress it from initial ideation to a venture pitch.",
       "design": "Evaluated global innovation and sustainable business practices while in Ireland, incorporating recyclable materials and circular-economy principles into the product concept.",
       "results": "Progressed the product concept into a venture pitch. This was a concept-stage project; a validated device or clinical result is not documented here.",
-      "cover": "assets/images/projects/limblet/exercise-interface.png",
+      "cover": "assets/images/projects/limblet/wearable-concept.png",
       "images": [
         {
           "src": "assets/images/projects/limblet/exercise-interface.png",
           "caption": "LimbLet exercise interface — Chair Squats"
         },
         {
-          "src": "",
-          "caption": "Development process"
+          "src": "assets/images/projects/limblet/wearable-concept.png",
+          "caption": "LimbLet wearable band concept render"
         },
         {
-          "src": "",
-          "caption": "Final presentation"
+          "src": "assets/images/projects/limblet/project-team.png",
+          "caption": "LimbLet project team in Ireland"
         }
       ],
       "links": [],
-      "cover_layout": "portrait"
+      "video": {
+        "src": "assets/videos/limblet-walkthrough.mp4",
+        "poster": "assets/images/projects/limblet/exercise-interface.png",
+        "title": "LimbLet app concept walkthrough",
+        "caption": "LimbLet app concept walkthrough · 51 sec",
+        "width": 540,
+        "height": 1168
+      }
     },
     {
       "id": "iris-drone",
