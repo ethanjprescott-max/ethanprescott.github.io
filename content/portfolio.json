@@ -283,7 +283,7 @@
         "Team coordination"
       ],
       "summary": "Led the planning, fabrication, and installation of signs at the BioReserve, using protected wooden panels and welded metal joints to support conservation education.",
-      "overview": "For my Eagle Scout project, I worked with the BioReserve, a nature preserve protecting historic or endangered plant life. Its leader previously relied on verbal guided tours to share information with visitors. The project added signs that could communicate that information on site, supporting tours and helping visitors learn from the signs themselves.",
+      "overview": "For my Eagle Scout project, I worked with The Bioreserve, a nonprofit biological field reserve in Glenmont, New York, on signs about its historic or endangered plant life. Its leader previously relied on verbal guided tours to share information with visitors. The project added signs that could communicate that information on site, supporting tours and helping visitors learn from the signs themselves.",
       "contribution": "Led project planning and communication, obtained approval from the Boy Scouts organization, and coordinated with the BioReserve to schedule installation. Worked alongside my dad and five friends and fellow Scouts. My dad helped source materials and arranged welding instruction from a friend; the team helped dig holes and install the signs.",
       "design": "Selected affordable materials with long-term use at the preserve in mind. The signs used wooden panels with a protective coating, plus welded metal joints that positioned the panels at a comfortable reading angle. The project combined material sourcing, fabrication, welding instruction, and site installation.",
       "results": "Installed signs that gave the BioReserve a lasting way to share information about its plant life without relying solely on verbal guided tours. Completing the project required balancing cost and durability, securing organizational approval, and coordinating volunteers and the preserve’s availability. The project formed part of earning my Eagle Scout rank.",
@@ -302,7 +302,12 @@
           "caption": "Team & installation"
         }
       ],
-      "links": []
+      "links": [
+        {
+          "label": "Visit The Bioreserve",
+          "url": "https://www.thebioreserve.org/"
+        }
+      ]
     },
     {
       "id": "personal-app",
