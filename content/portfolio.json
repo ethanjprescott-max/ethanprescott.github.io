@@ -132,26 +132,27 @@
     {
       "id": "beetlebot",
       "title": "Class Beetlebot",
-      "subtitle": "Mechanical Engineering Analysis & Design",
+      "subtitle": "Beater-bar robot · Class weapons division",
       "category": "Course project",
       "status": "Completed",
       "date": "August – December 2025",
       "role": "Lead project designer & driver",
       "tags": [
+        "Beater-bar",
         "Control wiring",
         "Integration",
         "Competition"
       ],
-      "summary": "Designed and wired the control system for a semester-long combat robot, then drove it in a classroom competition with a three-person team.",
-      "overview": "A semester-long combat robot project for Mechanical Engineering Analysis and Design. Our three-person team built a robot and competed against other class teams.",
+      "summary": "Designed and wired the control system for a beater-bar combat robot in the class weapons division, then drove it in competition with a three-person team.",
+      "overview": "A semester-long combat robot project for Mechanical Engineering Analysis and Design. Our three-person team built a robot for the weapons division, using a beater-bar weapon, and competed against other class teams.",
       "contribution": "I served as lead project designer and driver, designed and wired the control system, and operated the robot during competition.",
-      "design": "My documented work focused on control-system design, wiring, and integration. Further mechanical details, drawings, and build photos will be added here.",
-      "results": "Drove the robot in the class competition, where our team defeated two competing robots.",
+      "design": "The team’s robot used a beater-bar weapon for the class weapons division. My work focused on control-system design, wiring, and integration. Drawings and build photos will be added here.",
+      "results": "Drove the robot in the class weapons division, where our team defeated two competing robots.",
       "cover": "",
       "images": [
         {
           "src": "",
-          "caption": "Finished robot"
+          "caption": "Beater-bar robot"
         },
         {
           "src": "",
