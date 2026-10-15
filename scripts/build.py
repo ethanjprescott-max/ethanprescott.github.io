@@ -88,8 +88,9 @@ def card(project, number):
     link = 'projects/' + project['id'] + '.html'
     summary = f'<p class="project-summary">{e(project["summary"])}</p>' if project['summary'] else '<div class="empty-summary"><span></span><span></span><span></span><p class="sr-only">Project description to be added.</p></div>'
     tags = ''.join(f'<span class="tag">{e(tag)}</span>' for tag in project['tags'])
+    cover_class = 'cover-link contain' if project.get('cover_layout') == 'portrait' else 'cover-link'
     return f'''<article class="project-card">
-      <a class="cover-link" href="{link}" aria-label="View {e(project['title'])}">{photo(project['cover'],project['title'],f'{number:02d}')}</a>
+      <a class="{cover_class}" href="{link}" aria-label="View {e(project['title'])}">{photo(project['cover'],project['title'],f'{number:02d}')}</a>
       <p class="project-category">{e(project['category'])}</p><h3 class="project-title"><a href="{link}">{e(project['title'])}</a></h3><p class="project-subtitle">{e(project['subtitle'])}</p>{summary}
       {f'<div class="tags">{tags}</div>' if tags else ''}
       <div class="card-status">{status(project)}<a class="text-link" href="{link}" aria-label="View {e(project['title'])} project">View project {icon('arrow',13)}</a></div>
@@ -124,7 +125,8 @@ def hero_media(project, index, base):
     video = project.get('video')
     if video and video.get('placement','hero') == 'hero':
         return video_player(video,base)
-    return f'<div class="hero-photo">{photo(project["cover"],project["title"],f"{index+1:02d}",base)}</div>'
+    class_name = 'hero-photo portrait-media' if project.get('cover_layout') == 'portrait' else 'hero-photo'
+    return f'<div class="{class_name}">{photo(project["cover"],project["title"],f"{index+1:02d}",base)}</div>'
 
 def build_project(project, index):
     base = '../'

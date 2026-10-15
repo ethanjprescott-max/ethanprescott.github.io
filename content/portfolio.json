@@ -239,11 +239,11 @@
       "contribution": "Collaborated with an interdisciplinary team of three to develop the concept and progress it from initial ideation to a venture pitch.",
       "design": "Evaluated global innovation and sustainable business practices while in Ireland, incorporating recyclable materials and circular-economy principles into the product concept.",
       "results": "Progressed the product concept into a venture pitch. This was a concept-stage project; a validated device or clinical result is not documented here.",
-      "cover": "",
+      "cover": "assets/images/projects/limblet/exercise-interface.png",
       "images": [
         {
-          "src": "",
-          "caption": "Project visual"
+          "src": "assets/images/projects/limblet/exercise-interface.png",
+          "caption": "LimbLet exercise interface — Chair Squats"
         },
         {
           "src": "",
@@ -254,7 +254,8 @@
           "caption": "Final presentation"
         }
       ],
-      "links": []
+      "links": [],
+      "cover_layout": "portrait"
     },
     {
       "id": "iris-drone",
