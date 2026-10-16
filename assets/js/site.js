@@ -52,3 +52,46 @@ if (dialog && typeof dialog.showModal === 'function') {
     if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) dialog.close();
   });
 }
+
+// Gentle background parallax, matching the reference portfolio's scroll behavior.
+const photoMotion = window.matchMedia('(min-width: 761px) and (prefers-reduced-motion: no-preference)');
+let photoFrame = false;
+function updatePhotoPosition() {
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = maxScroll > 0 ? Math.min(1, Math.max(0, window.scrollY / maxScroll)) : 0;
+  if (sidebar) sidebar.style.setProperty('--photo-position', photoMotion.matches ? `${progress * 100}%` : '0%');
+  photoFrame = false;
+}
+window.addEventListener('scroll', () => {
+  if (!photoFrame) { photoFrame = true; window.requestAnimationFrame(updatePhotoPosition); }
+}, { passive: true });
+photoMotion.addEventListener('change', updatePhotoPosition);
+window.addEventListener('resize', updatePhotoPosition, { passive: true });
+window.addEventListener('load', updatePhotoPosition);
+if ('ResizeObserver' in window) new ResizeObserver(updatePhotoPosition).observe(document.querySelector('main'));
+updatePhotoPosition();
+
+// Reveal headings once as they enter the viewport; content stays visible without JS.
+const headingMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+if ('IntersectionObserver' in window && !headingMotion.matches) {
+  const headings = document.querySelectorAll('main h1, main .section-head, main .detail-heading, main .gallery-section > h2, main .video-section > h2, main .project-title');
+  const headingObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -20px 0px' });
+  headings.forEach((heading, index) => {
+    heading.style.setProperty('--reveal-delay', `${Math.min(index % 2, 1) * 80}ms`);
+    heading.classList.add('reveal-heading');
+    headingObserver.observe(heading);
+  });
+  headingMotion.addEventListener('change', event => {
+    if (event.matches) {
+      headingObserver.disconnect();
+      headings.forEach(heading => heading.classList.add('is-visible'));
+    }
+  });
+}
