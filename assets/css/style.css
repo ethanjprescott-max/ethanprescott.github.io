@@ -18,3 +18,125 @@
 .video-section{margin-top:34px}.video-section h2{font-size:20px;margin-bottom:18px}
 
 .cover-link.contain .project-photo{object-fit:contain;background:var(--wash)}.hero-photo.portrait-media{display:flex;justify-content:center;padding:16px;background:var(--wash);border:1px solid var(--line);border-radius:6px}.hero-photo.portrait-media .project-photo{width:auto;height:auto;max-width:100%;max-height:660px;aspect-ratio:auto;object-fit:contain}
+
+/* Photo-sidebar layout, inspired by Gavin Prescott's portfolio. */
+:root{--sidebar:32%;--ink:#565b61;--muted:#81878e;--blue:#426f88;--line:#e8e8e8}
+body{font-size:16px;line-height:1.8}
+.sidebar{padding:70px 42px 30px;text-align:right;background:linear-gradient(180deg,rgba(15,29,42,.38),rgba(12,26,39,.78)),url('../images/robotics-background.jpg') -104px center/cover no-repeat}
+.sidebar:before{display:none}
+.avatar{width:126px;height:126px;margin:0 0 24px auto;border:3px solid #ffffffb3;box-shadow:0 4px 24px #0003;background:#fff}
+.avatar img{object-position:50% 0%;transform:none}
+.sidebar-name{font-size:29px;font-weight:600;letter-spacing:-.6px;color:#fff}
+.sidebar-degree{font-size:15px;color:#f1f4f6;line-height:1.9;text-shadow:0 1px 8px #0006}
+.sidebar-school{color:#dde5eb;font-size:13px}
+.sidebar-rule{background:#ffffff38;margin:27px 0 20px}
+.sidebar-nav{align-items:flex-end;gap:3px}
+.sidebar-nav a{color:#f0f3f5;font-size:13px;gap:17px;text-shadow:0 1px 5px #0008}
+.sidebar-nav a:after{color:#d0e0ea}
+.sidebar-links{justify-content:flex-end;color:#eef3f7;font-size:13px}
+.sidebar-footer{color:#c7d4dd;font-size:11px}
+.main{padding:72px 60px 30px;max-width:1600px}
+h1,h2,h3{font-weight:500;letter-spacing:-.4px}
+.intro-title{font-size:32px;line-height:1.4;margin-bottom:23px}
+.eyebrow{color:#7d858b;font-size:10px}
+.intro-copy{font-size:16px;line-height:1.9;color:#777d83;max-width:760px}
+.button{font-size:13px;padding:10px 23px;border:2px solid #dedfe0;border-radius:5px;color:#606b72}
+.button.primary{background:transparent;border-color:#7a99aa;color:#355d75}
+.button.primary:hover{background:#f0f5f7}
+.section{margin-top:47px;padding-top:41px}
+h2{font-size:27px;color:#565b61}
+.project-grid{gap:40px 30px}
+.project-title{font-size:19px;color:#555c62}
+.project-summary{font-size:14px;line-height:1.8;color:#7b8288;min-height:0}
+.project-subtitle{font-size:13px}
+.project-category{font-size:10px}
+.tag{font-size:10px;background:#f5f5f5;color:#717b84;border:1px solid #e9ebed}
+.cover-link{border-radius:6px}
+.project-photo{transition:filter .2s}
+.cover-link:hover .project-photo{filter:brightness(.91)}
+.skill-group h3,.experience-item h3{font-size:15px}
+.skill-group p,.experience-item p{font-size:14px}
+.detail-copy{font-size:15px;color:#737b83}
+@media(min-width:1600px){.sidebar{padding:80px 55px 35px}.main{padding:80px 80px 30px}}
+@media(max-width:1200px){:root{--sidebar:31%}.sidebar{padding:55px 30px 28px}.main{padding:56px 40px 28px}.sidebar-name{font-size:25px}.sidebar-degree{font-size:13px}}
+@media(max-width:980px){:root{--sidebar:29%}.sidebar{padding:48px 24px 26px}.main{padding:48px 30px 26px}.avatar{width:106px;height:106px}.sidebar-name{font-size:23px}.sidebar-links{gap:12px;font-size:11px}.intro-copy{font-size:15px}.project-summary{font-size:13px}}
+@media(max-width:760px){
+html{scroll-padding-top:24px}
+.sidebar{position:relative;inset:auto;width:100%;padding:42px 24px 28px;min-height:440px;text-align:center;background-position:center 38%;display:flex;align-items:center}
+.identity{display:block}.avatar{width:116px;height:116px;margin:0 auto 16px}.sidebar-name{font-size:27px}.sidebar-degree{font-size:14px;line-height:1.65;margin-top:9px}.sidebar-degree br{display:block}.sidebar-school{display:block;margin-top:7px;color:#e0e7ed}
+.menu-toggle{display:none}.sidebar-rule{display:block;width:55px;margin:22px auto 12px}.sidebar-nav,.js-enabled .sidebar-nav{display:flex;flex-direction:row;justify-content:center;align-items:center;flex-wrap:wrap;gap:6px 22px;padding:0;max-width:440px}.sidebar-nav a{font-size:12px}.sidebar-bottom{display:block;margin-top:24px;padding-top:0}.sidebar-links{justify-content:center}.sidebar-footer{display:none}
+.main{margin:0;padding:35px 26px 24px}.intro-title{font-size:29px}.intro-copy{font-size:15px}.section{scroll-margin-top:24px}.project-summary{min-height:0}.project-grid{gap:34px 24px}
+}
+@media(max-width:480px){.main{padding:32px 23px 22px}.sidebar{min-height:425px}.project-grid{grid-template-columns:1fr}.project-summary{font-size:14px}.intro-actions{gap:10px}.intro-actions .button{font-size:12px;padding:9px 14px}.skills-grid{grid-template-columns:1fr}.detail-copy{font-size:14px}}
+
+/* The sidebar photograph moves gently with the project content. */
+@media(min-width:761px){.sidebar{background-position:center,-164px var(--photo-position,0%);background-size:cover,auto max(calc(100vh + 320px),32vw);background-repeat:no-repeat}}
+.page-intro{color:#777d83;margin-top:15px;font-size:15px}
+.resume-embed{display:block;width:100%;height:1000px;max-height:110vh;border:1px solid var(--line);margin-top:30px;border-radius:5px;background:#f7f8f9}
+.activity-item{padding:27px 0;border-bottom:1px solid var(--line)}
+.activity-item h3{font-size:20px;margin-bottom:9px}.activity-item p{color:#777d83;font-size:15px;line-height:1.9;max-width:740px}.activity-item .activity-meta{font-size:12px;color:var(--blue);margin-bottom:12px}.activity-item .text-link{margin-top:15px;font-size:13px}
+@media(max-width:760px){.resume-embed{height:75vh;min-height:420px}.activity-item h3{font-size:18px}}
+
+/* Villanova blues, warm highlights, and restrained entrance motion. */
+:root{--navy:#003b71;--blue:#006ca8;--ink:#334c61;--line:#dce9f1;--wash:#edf6fc}
+body{background:#fbfdff}
+.main{background:radial-gradient(ellipse at 100% 0,rgba(166,211,239,.2),transparent 650px)}
+h1,h2{color:#064775}h3{color:#224e6b}
+.intro-title{font-size:clamp(30px,3.1vw,43px);font-weight:650;letter-spacing:-1.1px}
+.eyebrow{color:#0074ac}.eyebrow:before{background:#54b5db}
+.section-head h2,.gallery-section h2,.video-section h2{position:relative;padding-left:17px}
+.section-head h2:before,.gallery-section h2:before,.video-section h2:before{content:'';position:absolute;left:0;top:4px;bottom:4px;width:4px;border-radius:3px;background:linear-gradient(#0098cc,#8cc8e4)}
+.section-head p{color:#5b8ea9}
+.intro-actions .button{background:#fff;box-shadow:0 3px 10px #164b7010;border-color:#9ac4de;color:#00588d}
+.intro-actions .button:first-child{background:#00558e;color:#fff;border-color:#00558e}
+.button{transition:background .2s,box-shadow .2s,transform .2s,border-color .2s}
+.button:hover{transform:translateY(-2px);box-shadow:0 6px 16px #164b7020;background:#eaf5fc}
+.intro-actions .button:first-child:hover{background:#003e6d}
+.project-card{border-bottom:2px solid #c1deed;padding-bottom:20px}
+.project-card:nth-child(3n+2){border-bottom-color:#cbb984}
+.project-card:nth-child(3n){border-bottom-color:#76b7b7}
+.project-category{color:#00699c;font-weight:700}
+.project-card:nth-child(3n+2) .project-category{color:#896622}
+.project-card:nth-child(3n) .project-category{color:#257677}
+.cover-link{box-shadow:0 4px 15px #174f6f0b;transition:transform .25s,box-shadow .25s}
+.cover-link:hover{transform:translateY(-4px);box-shadow:0 12px 24px #174f6f20}
+.project-title{color:#084b79}.project-title a:hover{color:#0080ba}
+.tag{background:#edf6fc;border-color:#d5e8f4;color:#3b6d8e}
+.text-link,.contact-links a{color:#006a9d}
+.skill-group{padding:17px 19px;border-radius:7px;background:linear-gradient(120deg,#edf7ff,#f7fbfe);border-left:3px solid #70b6dc}
+.skill-group:nth-child(3n+2){background:#f8f6ef;border-color:#c6ae70}
+.skill-group:nth-child(3n){background:#edf7f6;border-color:#6bafab}
+.skill-group h3{color:#17567e}
+.experience-item .organization{color:#006ba1}
+.detail-heading span{color:#0084b5;background:#e7f4fc;border-radius:50%;width:28px;height:28px;display:grid;place-items:center;flex-shrink:0}
+.project-meta{background:#edf6fc;padding:18px;border-radius:6px;border-color:#dceaf4}
+.project-meta dt{color:#4583a5}.project-meta dd{color:#315e79}
+.sidebar-nav a{transition:color .2s,transform .2s}.sidebar-nav a:hover{color:#a8e2ff;transform:translateX(-4px)}
+.sidebar-nav a[aria-current]{color:#a8e2ff}
+.reveal-heading{opacity:0;transform:translate3d(22px,16px,0);transition:opacity 1.2s ease,transform 1.2s cubic-bezier(.2,.65,.25,1);transition-delay:var(--reveal-delay,0ms)}
+.reveal-heading.is-visible{opacity:1;transform:translate3d(0,0,0)}
+@media(prefers-reduced-motion:reduce){.reveal-heading{opacity:1;transform:none;transition:none}.button:hover,.cover-link:hover,.sidebar-nav a:hover{transform:none}}
+
+/* Center the introduction and its actions. */
+#about{text-align:center}
+#about .eyebrow,#about .intro-actions{justify-content:center}
+#about .intro-title,#about .intro-copy{margin-left:auto;margin-right:auto}
+.main{overflow-x:clip}
+
+#about .intro-copy{max-width:570px;width:84%;margin-left:auto;margin-right:auto}
+#about .resume-button{min-width:240px;padding:12px 44px;letter-spacing:1px;font-size:14px}
+@media(max-width:480px){#about .intro-copy{width:90%}#about .resume-button{min-width:220px;max-width:100%}}
+
+#about .intro-copy{color:#000;text-align:left}
+
+#about .intro-copy{font-size:18px;line-height:1.9}
+
+/* Larger introduction, with proportional sizing on smaller screens. */
+#about{padding-top:12px;padding-bottom:12px}
+#about .intro-title{font-size:clamp(40px,4.1vw,56px);margin-bottom:30px}
+#about .intro-copy{font-size:21px;line-height:1.9}
+#about .intro-actions{margin-top:34px}
+#about .resume-button{min-width:290px;padding:15px 54px;font-size:18px;letter-spacing:1.2px}
+@media(max-width:480px){#about .intro-title{font-size:40px}#about .intro-copy{font-size:19px}#about .resume-button{min-width:250px;padding:14px 38px;font-size:17px}}
+
+.design-comparison{margin-top:25px}.design-comparison h3{margin-bottom:16px;font-size:19px;color:#17567e}.design-comparison .project-photo{aspect-ratio:1.2;object-fit:contain;background:#edf6fc}.design-comparison figcaption{font-size:12px;color:#526c80;margin-top:10px}

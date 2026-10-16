@@ -47,9 +47,9 @@ def photo(src='', label='Project photo', number='', base='', gallery=False):
 def sidebar(base='', project=False):
     avatar = (f'<img src="{e(asset_path(PROFILE["portrait"],base))}" alt="{e(PROFILE["name"])}">' if PROFILE['portrait'] else '<strong>EP</strong><span>Portrait</span>')
     home = base + 'index.html'
-    nav = ''.join(f'<a href="{home if project else ""}#{key}"{ " aria-current=\"page\"" if project and key == "projects" else ""}>{label}</a>' for key,label in [('about','About'),('projects','Projects'),('experience','Experience'),('contact','Contact')])
+    nav = ''.join(f'<a href="{home}#{key}"{ " aria-current=\"page\"" if project and key == "projects" else ""}>{label}</a>' for key,label in [('about','About'),('projects','Projects'),('experience','Experience'),('skills','Skills'),('contact','Contact')])
     if PROFILE['resume']:
-        nav += f'<a href="{e(asset_path(PROFILE["resume"],base))}" target="_blank" rel="noopener noreferrer">Résumé</a>'
+        nav += f'<a href="{base}resume.html">Résumé</a>'
     return f'''<aside class="sidebar" aria-label="Profile and navigation">
       <div class="identity"><a class="avatar" href="{e(home)}" aria-label="Ethan Prescott home">{avatar}</a><div><a class="sidebar-name" href="{e(home)}">{e(PROFILE['name'])}</a><p class="sidebar-degree">{e(PROFILE['degree'])}<br>{e(PROFILE['school'])}</p><p class="sidebar-school">{e(PROFILE['graduation'])}</p></div></div>
       <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="main-navigation" aria-expanded="false">{icon('menu')}</button>
@@ -102,8 +102,8 @@ def build_home():
     experience = ''.join(f'<article class="experience-item"><p class="experience-label">{e(item["when"])}</p><div><h3>{e(item["title"])}</h3><p class="organization">{e(item["organization"])}</p><p>{e(item["description"])}</p></div></article>' for item in PROFILE['experience'])
     resume = (f'<a class="button" href="{e(asset_path(PROFILE["resume"],""))}" download>{icon("file",14)} Download résumé</a>' if PROFILE['resume'] else f'<span class="button" aria-disabled="true">{icon("file",14)} Résumé · coming soon</span>')
     body = f'''
-    <section id="about" aria-labelledby="intro-title"><p class="eyebrow">Engineering portfolio</p><h1 class="intro-title" id="intro-title">Design. Build.<br><em>Make it work.</em></h1><p class="intro-copy">{e(PROFILE['intro'])}</p><div class="intro-actions"><a class="button primary" href="#projects">Explore my projects {icon('arrow',14)}</a>{resume}</div></section>
-    <section class="section" id="projects" aria-labelledby="projects-title"><div class="section-head"><h2 id="projects-title">Selected projects</h2><p>01 — 07</p></div><div class="project-grid">{cards}</div></section>
+    <section id="about" aria-labelledby="intro-title"><h1 class="intro-title" id="intro-title">About Me</h1><p class="intro-copy">{e(PROFILE['intro'])}</p><div class="intro-actions"><a class="button resume-button" href="resume.html">-Resume-</a></div></section>
+    <section class="section" id="projects" aria-labelledby="projects-title"><div class="section-head"><h2 id="projects-title">Projects</h2><p>01 — 07</p></div><div class="project-grid">{cards}</div></section>
     <section class="section" id="skills" aria-labelledby="skills-title"><div class="section-head"><h2 id="skills-title">Tools & skills</h2></div><div class="skills-grid">{skills}</div></section>
     <section class="section" id="experience" aria-labelledby="experience-title"><div class="section-head"><h2 id="experience-title">Experience & education</h2></div><div class="experience-list">{experience}</div></section>
     <section class="section" id="contact" aria-labelledby="contact-title"><div class="section-head"><h2 id="contact-title">Let’s connect</h2></div><p class="contact-copy">{e(PROFILE['interests'])}</p><div class="contact-links"><a href="mailto:{e(PROFILE['email'])}">{icon('mail',16)} Email</a><a href="{e(PROFILE['linkedin'])}" target="_blank" rel="noopener noreferrer">{icon('external',14)} LinkedIn</a><a href="{e(PROFILE['github'])}" target="_blank" rel="noopener noreferrer">{icon('external',14)} GitHub</a></div></section>
@@ -112,7 +112,11 @@ def build_home():
 
 def detail_content(title, key, project, number):
     copy = f'<p class="detail-copy">{e(project[key])}</p>' if project[key] else '<div class="empty-content" aria-label="Content to be added"></div>'
-    return f'<section class="detail-section" aria-labelledby="{key}-title"><div class="detail-heading"><span>{number:02d}</span><h2 id="{key}-title">{title}</h2></div>{copy}</section>'
+    comparison = ''
+    if key == 'design' and project.get('design_images'):
+        figures = ''.join(f'<figure>{photo(image["src"],image["caption"],base="../",gallery=True)}<figcaption>{e(image["caption"])}</figcaption></figure>' for image in project['design_images'])
+        comparison = f'<div class="design-comparison"><h3>From CAD to prototype</h3><div class="gallery-grid gallery-pair">{figures}</div></div>'
+    return f'<section class="detail-section" aria-labelledby="{key}-title"><div class="detail-heading"><span>{number:02d}</span><h2 id="{key}-title">{title}</h2></div>{copy}{comparison}</section>'
 
 def video_player(video, base):
     src = e(asset_path(video['src'],base))
@@ -154,6 +158,13 @@ def build_project(project, index):
     '''
     (ROOT / 'projects' / (project['id'] + '.html')).write_text(page(project['title'],project['summary'] or f'{project["title"]} — a project by Ethan Prescott.',body,base,True))
 
+
+def build_profile_pages():
+    back = '<a class="breadcrumb" href="index.html">← Back to portfolio</a>'
+    resume = e(asset_path(PROFILE['resume'], ''))
+    body = back + f'''<section aria-labelledby="resume-title"><h1 id="resume-title">Résumé</h1><p class="page-intro">Mechanical engineering, robotics, and hands-on project experience.</p><div class="intro-actions"><a class="button" href="{resume}" download>Download PDF</a><a class="button" href="{resume}" target="_blank" rel="noopener">Open PDF</a></div><object class="resume-embed" data="{resume}" type="application/pdf" aria-label="Ethan Prescott résumé"><p><a href="{resume}">Open the résumé PDF</a> to view it on your device.</p></object></section>'''
+    (ROOT / 'resume.html').write_text(page('Résumé', 'Ethan Prescott — résumé.', body))
+
 def main():
     ids = [project['id'] for project in PROJECTS]
     if len(set(ids)) != len(ids):
@@ -163,6 +174,7 @@ def main():
             raise ValueError(f'Invalid project ID: {project_id}')
     (ROOT / 'projects').mkdir(exist_ok=True)
     build_home()
+    build_profile_pages()
     for index,project in enumerate(PROJECTS):
         build_project(project,index)
     print(f'Built homepage and {len(PROJECTS)} project pages.')

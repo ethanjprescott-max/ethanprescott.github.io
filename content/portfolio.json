@@ -4,12 +4,12 @@
     "degree": "Mechanical Engineering",
     "school": "Villanova University",
     "graduation": "Class of 2028",
-    "portrait": "",
+    "portrait": "assets/images/ethan-profile.jpg",
     "email": "ethan.j.prescott@gmail.com",
     "linkedin": "https://www.linkedin.com/in/ethan-prescott22",
     "github": "https://github.com/ethanjprescott-max",
     "resume": "assets/ethan-prescott-resume.pdf",
-    "intro": "I’m a mechanical engineering student at Villanova University and co-president of Villanova Club Robotics. I enjoy taking a project from a CAD model to a working build, solving the problems along the way, and working with a team to make it happen.",
+    "intro": "I’m Ethan, a Mechanical Engineering student at Villanova University and co-president of Villanova Club Robotics. I enjoy taking a project from a CAD model to a working build, solving the problems along the way, and working with a team to make it happen.",
     "interests": "I’m interested in internship opportunities in robotics, mechanical design, and automation.",
     "skills": [
       {
@@ -31,7 +31,7 @@
       {
         "title": "Fabrication",
         "items": [
-          "3D printing",
+          "3D printing · Bambu printers",
           "Soldering",
           "Manual milling"
         ]
@@ -86,7 +86,8 @@
         "organization": "Villanova University · College of Engineering",
         "description": "Minors in Mechatronics and Entrepreneurship · GPA: 3.74. Coursework includes Solid Mechanics and Design, Dynamics II, Circuits, Heat Transfer, and Fluid Mechanics."
       }
-    ]
+    ],
+    "background": "assets/images/robotics-background.jpg"
   },
   "projects": [
     {
@@ -95,17 +96,18 @@
       "subtitle": "3 lb NHRL combat robot",
       "category": "Combat robotics",
       "status": "Competition project",
-      "date": "January 2025 – Present",
+      "date": "January 2025 – May 2026",
       "role": "Team lead & driver",
       "tags": [
         "SolidWorks",
+        "3D printing",
         "Fabrication",
         "Team leadership"
       ],
       "summary": "Led a nine-member team building one of Villanova’s first 3 lb combat robots to compete at NHRL.",
       "overview": "FREEDOM is a 3 lb vertical-spinner combat robot built by Villanova Combat Robotics for competition at the National Havoc Robot League (NHRL). The project brought together mechanical design, component research, fabrication, electrical integration, and competition preparation.",
       "contribution": "As team lead and driver, I coordinated mechanical and electrical subsystem development, delegated responsibilities, and managed project deadlines. My work included SolidWorks design iterations, component selection, weight-budget management, fabrication, and system integration.",
-      "design": "Collaborated across drivetrain, chassis, electronics, and rotating-system teams to resolve tradeoffs involving weight, packaging, reliability, and manufacturability within the 3 lb competition constraint.",
+      "design": "Collaborated across drivetrain, chassis, electronics, and rotating-system teams to resolve tradeoffs involving weight, packaging, reliability, and manufacturability within the 3 lb competition constraint. The early design was modeled in SolidWorks, and prototype parts were fabricated using Bambu 3D printers.",
       "results": "FREEDOM became one of Villanova’s first 3 lb combat robots to compete at NHRL. I served as its team lead and driver. More detailed competition notes and design iterations will be added here.",
       "cover": "assets/images/projects/freedom/robot-check-in.png",
       "images": [
@@ -149,11 +151,21 @@
         "heading": "At NHRL",
         "width": 960,
         "height": 444
-      }
+      },
+      "design_images": [
+        {
+          "src": "assets/images/projects/freedom/early-solidworks.jpeg",
+          "caption": "Early SolidWorks assembly model"
+        },
+        {
+          "src": "assets/images/projects/freedom/fabricated-prototype.jpeg",
+          "caption": "Fabricated prototype during assembly · Bambu-printed parts"
+        }
+      ]
     },
     {
       "id": "beetlebot",
-      "title": "Class Beetlebot",
+      "title": "Bread — Class Beetlebot",
       "subtitle": "Beater-bar robot · Class weapons division",
       "category": "Course project",
       "status": "Completed",
@@ -165,27 +177,33 @@
         "Integration",
         "Competition"
       ],
-      "summary": "Designed and wired the control system for a beater-bar combat robot in the class weapons division, then drove it in competition with a three-person team.",
-      "overview": "A semester-long combat robot project for Mechanical Engineering Analysis and Design. Our three-person team built a robot for the weapons division, using a beater-bar weapon, and competed against other class teams.",
+      "summary": "Designed and wired the control system for Bread, a beater-bar combat robot in the class weapons division, then drove it in competition with a three-person team.",
+      "overview": "Bread was our beater-bar combat robot for the class weapons division. A semester-long combat robot project for Mechanical Engineering Analysis and Design. Our three-person team built a robot for the weapons division, using a beater-bar weapon, and competed against other class teams.",
       "contribution": "I served as lead project designer and driver, designed and wired the control system, and operated the robot during competition.",
-      "design": "The team’s robot used a beater-bar weapon for the class weapons division. My work focused on control-system design, wiring, and integration. Drawings and build photos will be added here.",
+      "design": "The team’s robot used a beater-bar weapon for the class weapons division. My work focused on control-system design, wiring, and integration.",
       "results": "Drove the robot in the class weapons division, where our team defeated two competing robots.",
-      "cover": "",
+      "cover": "assets/images/projects/beetlebot/robot-and-controller.jpg",
       "images": [
         {
-          "src": "",
-          "caption": "Beater-bar robot"
+          "src": "assets/images/projects/beetlebot/robot-and-controller.jpg",
+          "caption": "Bread and FlySky controller at the competition"
         },
         {
-          "src": "",
-          "caption": "Control system & wiring"
-        },
-        {
-          "src": "",
-          "caption": "Build & competition"
+          "src": "assets/images/projects/beetlebot/ethan-with-beetlebot.jpg",
+          "caption": "Ethan holding the completed Bread"
         }
       ],
-      "links": []
+      "links": [],
+      "video": {
+        "src": "assets/videos/beetlebot-competition.mp4",
+        "poster": "assets/images/projects/beetlebot/competition-poster.jpg",
+        "title": "Bread · Class Beetlebot competition recording",
+        "caption": "Bread in the competition arena · 26 sec",
+        "placement": "gallery",
+        "heading": "Competition footage",
+        "width": 540,
+        "height": 960
+      }
     },
     {
       "id": "cti-roller",
@@ -193,7 +211,7 @@
       "subtitle": "Engineering internship project",
       "category": "Industry project",
       "status": "Completed",
-      "date": "Summers 2024 & 2025",
+      "date": "Summer 2025",
       "role": "Engineering intern",
       "tags": [
         "Fabrication",
@@ -277,7 +295,7 @@
       "subtitle": "Pixhawk setup & troubleshooting",
       "category": "Drone systems",
       "status": "In progress",
-      "date": "2026 – Present",
+      "date": "September 2026 – Present",
       "role": "Setup & systems troubleshooting",
       "tags": [
         "Pixhawk",
@@ -308,7 +326,7 @@
       "subtitle": "BioReserve conservation signs",
       "category": "Leadership & service",
       "status": "Completed",
-      "date": "",
+      "date": "April – July 2024",
       "role": "Project leader",
       "tags": [
         "Project planning",
@@ -349,15 +367,15 @@
       "subtitle": "Quest · A private birthday game",
       "category": "Software project",
       "status": "Completed",
-      "date": "",
+      "date": "May – June 2026 · One month of development",
       "role": "Sole creator & playtester",
       "tags": [
         "Base44",
         "AI-assisted development",
         "Playtesting"
       ],
-      "summary": "Created Quest, a private birthday game with about a month of daily minigames, new games introduced over time, and personalized messages and rewards.",
-      "overview": "Quest is a private app I made for my girlfriend’s birthday. The experience spanned about a month, with minigames to play each day and additional minigames introduced as the days progressed. It included music, personal messages, rewards, Easter eggs, and difficulty features.",
+      "summary": "Created Quest, a private birthday game with three weeks of daily minigames, new games introduced over time, and personalized messages and rewards.",
+      "overview": "Quest is a private app I made for my girlfriend’s birthday. I spent one month developing the app, from May to June 2026. The experience spanned three weeks, with minigames to play each day and additional minigames introduced as the days progressed. It included music, personal messages, rewards, Easter eggs, and difficulty features.",
       "contribution": "I created the app myself using Base44’s AI development tools and independently playtested it. My work covered the game concept, daily experience, minigames, and personalized features.",
       "design": "Built the experience through Base44, using its AI development tools to develop the minigames and supporting features. I organized the game around daily play, introduced new minigames over time, and playtested the app myself.",
       "results": "Quest received positive feedback from my girlfriend, its intended user. The app remains private.",

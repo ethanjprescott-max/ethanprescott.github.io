@@ -68,7 +68,7 @@ window.addEventListener('scroll', () => {
 photoMotion.addEventListener('change', updatePhotoPosition);
 window.addEventListener('resize', updatePhotoPosition, { passive: true });
 window.addEventListener('load', updatePhotoPosition);
-if ('ResizeObserver' in window) new ResizeObserver(updatePhotoPosition).observe(document.querySelector('main'));
+if ('ResizeObserver' in window) new ResizeObserver(updatePhotoPosition).observe(document.querySelector('main')); 
 updatePhotoPosition();
 
 // Reveal headings once as they enter the viewport; content stays visible without JS.
