@@ -153,5 +153,5 @@ h1,h2{color:#064775}h3{color:#224e6b}
 @media(max-width:600px){.about-villanova{width:200%;max-width:300px;margin-left:0}}
 
 /* Raise the About Me artwork and give FREEDOM more presence. */
-@media(min-width:601px){.about-art{transform:translateY(-55px)}.about-freedom{transform:translateY(-55px) scale(1.18)}}
+@media(min-width:601px){.about-art{transform:translateY(-155px)}.about-freedom{transform:translate(-20px,-155px) scale(1.18)}}
 @media(max-width:600px){.about-freedom{transform:scale(1.12)}}
