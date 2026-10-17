@@ -161,3 +161,6 @@ h1,h2{color:#064775}h3{color:#224e6b}
 .about-art-copy{position:absolute;top:300px;left:0;pointer-events:none}
 .about-visual-right .about-freedom{transform:translateY(-155px) scale(1.18)}
 @media(max-width:600px){.about-visual-left{grid-column:1;grid-row:1}.about-visual-right{grid-column:2;grid-row:1}.about-visual{display:flex;justify-content:center}.about-art-copy{display:none}.about-visual-right .about-freedom{transform:none}}
+
+/* Center the lower pair on their shared average height. */
+@media(min-width:601px){.about-art-copy{top:calc(50% + 145px);transform:translateY(-50%)}.about-visual-right .about-freedom.about-art-copy{transform:translateY(-50%) scale(1.18)}}
