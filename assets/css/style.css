@@ -151,3 +151,7 @@ h1,h2{color:#064775}h3{color:#224e6b}
 @media(max-width:600px){.about-layout{grid-template-columns:1fr 1fr;gap:20px 30px}.about-text{grid-column:1/-1;grid-row:2}.about-art{height:110px;max-width:170px;justify-self:center}.about-villanova{grid-column:2;grid-row:1}.about-freedom{grid-column:1;grid-row:1}#about .intro-copy{width:100%}}
 
 @media(max-width:600px){.about-villanova{width:200%;max-width:300px;margin-left:0}}
+
+/* Raise the About Me artwork and give FREEDOM more presence. */
+@media(min-width:601px){.about-art{transform:translateY(-55px)}.about-freedom{transform:translateY(-55px) scale(1.18)}}
+@media(max-width:600px){.about-freedom{transform:scale(1.12)}}
