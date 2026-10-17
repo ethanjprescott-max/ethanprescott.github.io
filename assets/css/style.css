@@ -142,10 +142,12 @@ h1,h2{color:#064775}h3{color:#224e6b}
 .design-comparison{margin-top:25px}.design-comparison h3{margin-bottom:16px;font-size:19px;color:#17567e}.design-comparison .project-photo{aspect-ratio:1.2;object-fit:contain;background:#edf6fc}.design-comparison figcaption{font-size:12px;color:#526c80;margin-top:10px}
 
 /* About Me: robot and university artwork flank the introduction. */
-.about-layout{display:grid;grid-template-columns:minmax(100px,1fr) minmax(0,570px) minmax(100px,1fr);align-items:center;gap:24px}
+.about-layout{display:grid;grid-template-columns:minmax(110px,1fr) minmax(0,460px) minmax(110px,1fr);align-items:center;gap:24px}
 .about-text{min-width:0}
 #about .intro-copy{width:100%}
 .about-art{display:block;width:100%;height:auto;object-fit:contain;max-height:230px;filter:drop-shadow(0 10px 12px #15304918)}
-.about-villanova{max-height:210px}
-@media(min-width:761px) and (max-width:1200px){.about-layout{grid-template-columns:minmax(65px,1fr) minmax(0,430px) minmax(65px,1fr);gap:16px}#about .intro-copy{font-size:19px}#about .resume-button{min-width:0;width:100%;max-width:290px;padding-left:24px;padding-right:24px}}
+.about-villanova{width:200%;max-width:none;margin-left:-50%;max-height:230px}
+@media(min-width:761px) and (max-width:1200px){.about-layout{grid-template-columns:minmax(90px,1fr) minmax(0,400px) minmax(90px,1fr);gap:16px}#about .intro-copy{font-size:19px}#about .resume-button{min-width:0;width:100%;max-width:290px;padding-left:24px;padding-right:24px}}
 @media(max-width:600px){.about-layout{grid-template-columns:1fr 1fr;gap:20px 30px}.about-text{grid-column:1/-1;grid-row:2}.about-art{height:110px;max-width:170px;justify-self:center}.about-villanova{grid-column:2;grid-row:1}.about-freedom{grid-column:1;grid-row:1}#about .intro-copy{width:100%}}
+
+@media(max-width:600px){.about-villanova{width:200%;max-width:300px;margin-left:0}}
