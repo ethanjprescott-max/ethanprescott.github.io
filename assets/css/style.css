@@ -155,3 +155,9 @@ h1,h2{color:#064775}h3{color:#224e6b}
 /* Raise the About Me artwork and give FREEDOM more presence. */
 @media(min-width:601px){.about-art{transform:translateY(-155px)}.about-freedom{transform:translate(-20px,-155px) scale(1.18)}}
 @media(max-width:600px){.about-freedom{transform:scale(1.12)}}
+
+/* Repeat the opposite artwork 300px below each original. */
+.about-visual{position:relative;min-width:0}
+.about-art-copy{position:absolute;top:300px;left:0;pointer-events:none}
+.about-visual-right .about-freedom{transform:translateY(-155px) scale(1.18)}
+@media(max-width:600px){.about-visual-left{grid-column:1;grid-row:1}.about-visual-right{grid-column:2;grid-row:1}.about-visual{display:flex;justify-content:center}.about-art-copy{display:none}.about-visual-right .about-freedom{transform:none}}
