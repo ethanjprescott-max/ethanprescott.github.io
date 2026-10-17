@@ -164,3 +164,5 @@ h1,h2{color:#064775}h3{color:#224e6b}
 
 /* Center the lower pair on their shared average height. */
 @media(min-width:601px){.about-art-copy{top:calc(50% + 145px);transform:translateY(-50%)}.about-visual-right .about-freedom.about-art-copy{transform:translateY(-50%) scale(1.18)}}
+
+@media(min-width:601px){.about-visual-left .about-villanova.about-art-copy{transform:translate(-20px,-50%)}}
